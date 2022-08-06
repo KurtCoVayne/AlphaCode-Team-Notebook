@@ -9,13 +9,6 @@ ll eea(ll a, ll b, ll& x, ll& y) {
   }
   return a;
 }
-ll inverse(ll a, ll n) {
-  ll x, y;
-  ll g = eea(a, n, x, y);
-  if(g > 1)
-    return -1;
-  return (x % n + n) % n;
-}
 // a*x+b*y = g
 bool find_any_solution(ll a, ll b, ll c, ll &x0, ll &y0, ll &g) {
   g = eea(abs(a), abs(b), x0, y0);
